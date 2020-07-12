@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+html {
+  background-color: pink;
+  font-family: 'Fredoka One', sans-serif;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Fredoka One', sans-serif;
+}
+
+.App{
+  margin: 3em auto;
+  width: 80%;
+}
+
+.food-card{
+  background-color: white;
+  width: min-content;
+  padding: 2em;
+  border-radius: 100px;
+  text-align: center;
+  margin:1em;
+}
+
+.food-card h2 {
+  margin: 0;
+}
