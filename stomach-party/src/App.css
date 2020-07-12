@@ -1,26 +1,57 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
-html {
+body {
   background-color: pink;
   font-family: 'Fredoka One', sans-serif;
+  position: relative;
 }
 
 h1, h2, h3, h4 {
   font-family: 'Fredoka One', sans-serif;
+  text-align: center;
+}
+
+#startPart{
+  text-align: center;
 }
 
 .App{
-  margin: 3em auto;
-  width: 80%;
+}
+
+.start-btn{
+  background-color: purple;
+  color:white;
+  border: none;
+  border-radius: 100px;
+  font-size: 50px;
+  font-family: inherit;
+  padding: 0.25em 0.5em;
+}
+
+#FoodSelection{
+  display:flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .food-card{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  
   background-color: white;
-  width: min-content;
+  width: 300px;
   padding: 2em;
   border-radius: 100px;
   text-align: center;
   margin:1em;
+  height:300px;
+}
+
+.food-card img{
+  width: 250px;
 }
 
 .food-card h2 {

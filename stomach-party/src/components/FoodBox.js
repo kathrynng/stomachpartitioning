@@ -5,7 +5,13 @@ import Foods from './images'
 class FoodBox extends Component {
     render() { 
         return (
+            <div id="FoodSelection">
+            <FoodSelect source={Foods[0]}/>
+            <FoodSelect source={Foods[1]}/>
             <FoodSelect source={Foods[2]}/>
+            <FoodSelect source={Foods[3]}/>
+
+            </div>
         );
     }
 }
@@ -28,9 +34,8 @@ class FoodSelect extends Component {
 
         var sourceTypeName = getSource[3].split("_")
         
-        console.log(sourceTypeName)
         for(var n in sourceTypeName){
-            if (sourceTypeName[n] == "sweets" || n == "food")
+            if (sourceTypeName[n] == "sweets" ||sourceTypeName[n] == "food")
                 typeFood = sourceTypeName[n]
             else {
                 nameFood += sourceTypeName[n] + ' '
