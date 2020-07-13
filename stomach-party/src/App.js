@@ -4,6 +4,7 @@ import "./App.css";
 
 import QuestionCard from "./components/Questions";
 import FoodBox from "./components/FoodBox";
+import StomachList from "./components/Stomach"
 
 class App extends Component {
   state = {
@@ -19,7 +20,7 @@ class App extends Component {
     return (
       <div className="App">
         {this.state.startGame ? (
-          <FoodBox />
+          <FoodToStomach/>
         ) : (
           <Start onChange={this.handleStart} />
         )}
@@ -42,6 +43,17 @@ class Start extends Component {
         <button className="start-btn" onClick={this.startParty}>
           Start
         </button>
+      </div>
+    );
+  }
+}
+
+class FoodToStomach extends Component {
+  render() { 
+    return (
+      <div id="foodtostomach">
+        <FoodBox/>
+        <StomachList/>
       </div>
     );
   }
