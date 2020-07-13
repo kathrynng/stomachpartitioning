@@ -3,14 +3,18 @@ import React, { Component } from 'react';
 import Foods from './images'
 
 class FoodBox extends Component {
+
+    handleChangeFood = (event) => {
+        console.log(this.props.source)
+    }
+
     render() { 
         return (
             <div id="FoodSelection">
-            <FoodSelect source={Foods[0]}/>
-            <FoodSelect source={Foods[1]}/>
-            <FoodSelect source={Foods[2]}/>
-            <FoodSelect source={Foods[3]}/>
-
+                <FoodSelect onChange={this.handleChangeFood} source={Foods[0]}/>
+                <FoodSelect onChange={this.handleChangeFood} source={Foods[1]}/>
+                <FoodSelect onChange={this.handleChangeFood} source={Foods[2]}/>
+                <FoodSelect onChange={this.handleChangeFood} source={Foods[3]}/>
             </div>
         );
     }
@@ -21,14 +25,7 @@ export default FoodBox;
 class FoodSelect extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            type: '',
-            name: ''
-        }
-        
-    }
 
-    getTypeName = () => {
         var typeFood, nameFood = ''
         var getSource = this.props.source.split(new RegExp("[/\.]",'g'))
 
@@ -42,16 +39,19 @@ class FoodSelect extends Component {
             }
         }
 
-        this.setState({
+        this.state = {
             type: typeFood,
             name: nameFood
-        })
-    
+        }    
+    }
+
+    changeFood = (event) =>{
+        this.props.onChange(event.target)
     }
 
     render() {
         return (
-            <div className="food-card" onClick={this.getTypeName}>
+            <div className="food-card" onClick={this.changeFood}>
                 <img src={this.props.source}/>
                 <h2>{this.state.name}</h2>
             </div>
