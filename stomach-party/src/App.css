@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
-body {
+html, body {
+  height: 100%;
+
   background-color: pink;
   font-family: 'Fredoka One', sans-serif;
   position: relative;
@@ -12,8 +14,24 @@ h1, h2, h3, h4 {
 }
 
 .App{
-  width: 80%;
-  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: table;
+
+}
+
+.main{
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.mainArea{
+  margin-left:auto;
+  margin-right: auto;
+  width: max-content;
 }
 
 #startPart{
@@ -28,6 +46,16 @@ h1, h2, h3, h4 {
   font-size: 50px;
   font-family: inherit;
   padding: 0.25em 0.5em;
+}
+
+.start-btn:hover{
+  background-color: rgb(54, 24, 54);
+  color:rgb(184, 184, 184);
+}
+
+#foodtostomach{
+  display:flex;
+  flex-wrap: wrap;
 }
 
 #FoodSelection{
@@ -50,12 +78,38 @@ h1, h2, h3, h4 {
   text-align: center;
   margin:1em;
   height:250px;
+
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+     -moz-user-select: none; /* Old versions of Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+          user-select: none; /* Non-prefixed version, currently
+                                supported by Chrome, Edge, Opera and Firefox */
 }
 
 .food-card img{
+  /* Change so that it changes size to maintain aspect ratio */
   width: 200px;
+  height: 200px;
 }
 
 .food-card h2 {
   margin: 0;
+}
+
+.stomachList {
+  width: 250px;
+  height: min-content;
+  margin: auto 1rem;
+}
+
+.stomach-foodList{
+  border-radius: 2rem;
+  /* width: 250px; */
+  height: 500px;
+  padding: 0.5rem 2em;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: hotpink;
 }
