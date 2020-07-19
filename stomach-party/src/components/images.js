@@ -13,6 +13,10 @@ import CrabLegs from '../images/food_Crab_Legs.png'
 import CurryRice from '../images/food_Curry_Rice.png'
 import EggsBen from '../images/food_Eggs_Benedict.png'
 import FishChips from '../images/food_Fish_and_Chips.png'
+import Salmon from '../images/food_Grilled_Salmon.png'
+
+import Ramen from '../images/food_Shio_Ramen.png'
+
 
 import Muffin from '../images/sweet_Muffin.png'
 import Crepe from '../images/sweets_Crepe.png'
@@ -33,6 +37,9 @@ export default [
     {"name" : "Curry Rice","source": CurryRice, "type":"food"},
     {"name" : "Eggs Benedict","source": EggsBen, "type":"food"},
     {"name" : "Fish and Chips","source": FishChips, "type":"food"},
+    {"name" : "Salmon","source": Salmon, "type":"food"},
+    
+    {"name" : "Ramen","source": Ramen, "type":"food"},
 
     {"name" : "Muffin","source": Muffin, "type":"sweets"},
     {"name" : "Crepe","source": Crepe, "type":"sweets"},

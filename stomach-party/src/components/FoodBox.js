@@ -22,12 +22,26 @@ class FoodBox extends Component {
       var changeToFood = Foods[Math.floor(Math.random() * Foods.length)]
       while (currentFoodList.includes(changeToFood)) changeToFood = Foods[Math.floor(Math.random() * Foods.length)]
       this.setState({['food'+value]: changeToFood});
-
-      
   }
+
+  randomizeFood = () => {
+    var currentFoodList = [this.state.food1, this.state.food2, this.state.food3, this.state.food4]
+    var newFoodList = []
+    
+    for(var n = 1; n <= 4; n++){
+      var changeToFood = Foods[Math.floor(Math.random() * Foods.length)]
+      while (currentFoodList.includes(changeToFood) || newFoodList.includes(changeToFood))
+        var changeToFood = Foods[Math.floor(Math.random() * Foods.length)]
+      newFoodList.push(changeToFood)
+  }
+  for(var n = 1; n <= 4; n++)
+    this.setState({['food'+n]: newFoodList[n-1]});
+}
 
   render() {
     return (
+      <div className='foodArea'>
+        <button className='random-btn' onClick={this.randomizeFood}>Randomize</button>
       <div id="FoodSelection">
         <FoodSelect
           onFoodChange={this.onChange}
@@ -58,6 +72,8 @@ class FoodBox extends Component {
           source={this.state.food4.source}
         />
       </div>
+      </div>
+
     );
   }
 }
