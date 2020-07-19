@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/stomachpartitioning/static/css/main.ac8dd40c.chunk.css",
+    "main.js": "/stomachpartitioning/static/js/main.a0b21c15.chunk.js",
+    "main.js.map": "/stomachpartitioning/static/js/main.a0b21c15.chunk.js.map",
+    "runtime-main.js": "/stomachpartitioning/static/js/runtime-main.c32ab326.js",
+    "runtime-main.js.map": "/stomachpartitioning/static/js/runtime-main.c32ab326.js.map",
+    "static/js/2.b99fbbee.chunk.js": "/stomachpartitioning/static/js/2.b99fbbee.chunk.js",
+    "static/js/2.b99fbbee.chunk.js.map": "/stomachpartitioning/static/js/2.b99fbbee.chunk.js.map",
+    "index.html": "/stomachpartitioning/index.html",
+    "precache-manifest.02471e5bfdfdce669e068badc0a4fadd.js": "/stomachpartitioning/precache-manifest.02471e5bfdfdce669e068badc0a4fadd.js",
+    "service-worker.js": "/stomachpartitioning/service-worker.js",
+    "static/css/main.ac8dd40c.chunk.css.map": "/stomachpartitioning/static/css/main.ac8dd40c.chunk.css.map",
+    "static/js/2.b99fbbee.chunk.js.LICENSE.txt": "/stomachpartitioning/static/js/2.b99fbbee.chunk.js.LICENSE.txt",
+    "static/media/computer_harddisk.png": "/stomachpartitioning/static/media/computer_harddisk.b9863ceb.png",
+    "static/media/food_BLT_Sandwich.png": "/stomachpartitioning/static/media/food_BLT_Sandwich.87a816a3.png",
+    "static/media/food_Banh_Mi_Sandwich.png": "/stomachpartitioning/static/media/food_Banh_Mi_Sandwich.4e2c8a7e.png",
+    "static/media/food_Cheese_Ball.png": "/stomachpartitioning/static/media/food_Cheese_Ball.562af3a0.png",
+    "static/media/food_Chicken.png": "/stomachpartitioning/static/media/food_Chicken.cb99e2d2.png",
+    "static/media/food_Crab_Legs.png": "/stomachpartitioning/static/media/food_Crab_Legs.762cd760.png",
+    "static/media/food_Curry_Rice.png": "/stomachpartitioning/static/media/food_Curry_Rice.65812033.png",
+    "static/media/food_Eggs_Benedict.png": "/stomachpartitioning/static/media/food_Eggs_Benedict.6bf876c3.png",
+    "static/media/food_Fish_and_Chips.png": "/stomachpartitioning/static/media/food_Fish_and_Chips.c250b35d.png",
+    "static/media/food_Grilled_Salmon.png": "/stomachpartitioning/static/media/food_Grilled_Salmon.a393fe8a.png",
+    "static/media/food_Lasagna.png": "/stomachpartitioning/static/media/food_Lasagna.9cc7b6e0.png",
+    "static/media/food_Mixed_Nuts.png": "/stomachpartitioning/static/media/food_Mixed_Nuts.59b0341d.png",
+    "static/media/food_Pretzel.png": "/stomachpartitioning/static/media/food_Pretzel.d66cb70d.png",
+    "static/media/food_Shio_Ramen.png": "/stomachpartitioning/static/media/food_Shio_Ramen.1920b978.png",
+    "static/media/stomach.png": "/stomachpartitioning/static/media/stomach.e8567c77.png",
+    "static/media/sweet_Muffin.png": "/stomachpartitioning/static/media/sweet_Muffin.cae53ed0.png",
+    "static/media/sweets_Apple_Pie.png": "/stomachpartitioning/static/media/sweets_Apple_Pie.03472f9f.png",
+    "static/media/sweets_Crepe.png": "/stomachpartitioning/static/media/sweets_Crepe.07bf3368.png",
+    "static/media/sweets_icecream.png": "/stomachpartitioning/static/media/sweets_icecream.31213bb0.png",
+    "static/media/sweets_jelly.png": "/stomachpartitioning/static/media/sweets_jelly.dfe093e7.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c32ab326.js",
+    "static/js/2.b99fbbee.chunk.js",
+    "static/css/main.ac8dd40c.chunk.css",
+    "static/js/main.a0b21c15.chunk.js"
+  ]
+}
