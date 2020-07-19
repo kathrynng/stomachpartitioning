@@ -4,7 +4,7 @@ import "./App.css";
 
 import QuestionCard from "./components/Questions";
 import FoodBox from "./components/FoodBox";
-import StomachList from "./components/Stomach";
+import StomachList, { ChooseStomachSize } from "./components/Stomach";
 
 class App extends Component {
   state = {
@@ -21,12 +21,11 @@ class App extends Component {
       <div className="App">
         <div className="main">
           <div className="mainArea">
-          {this.state.startGame ? (
-            <FoodToStomach />
-          ) : (
-            <Start onChange={this.handleStart} />
-          )}
-
+            {this.state.startGame ? (
+              <FoodToStomach />
+            ) : (
+              <Start onChange={this.handleStart} />
+            )}
           </div>
         </div>
       </div>
@@ -54,11 +53,27 @@ class Start extends Component {
 }
 
 class FoodToStomach extends Component {
+  state = {
+    selectedSize: false,
+  };
+  selectedSize = (event) => {
+    this.setState({
+      selectedSize: true,
+    });
+  };
   render() {
     return (
-      <div id="foodtostomach">
-        <FoodBox />
-        <StomachList />
+      <div>
+        {this.state.selectedSize ? (
+          <div id="foodtostomach">
+            <FoodBox />
+            <StomachList />
+          </div>
+        ) : (
+          <div id="stomachSize">
+            <ChooseStomachSize onChange={this.selectedSize} />
+          </div>
+        )}
       </div>
     );
   }

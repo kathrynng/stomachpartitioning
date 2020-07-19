@@ -53,6 +53,35 @@ h1, h2, h3, h4 {
   color:rgb(184, 184, 184);
 }
 
+.chooseStomachSize{
+  text-align: center;
+}
+
+.chooseStomachSize img{
+  width: 200px
+}
+
+.btn-grp{
+  display: inline;
+  margin: 0 auto;
+}
+
+.btn-size{
+  background-color: rgb(139, 32, 32);
+  color:white;
+  border: none;
+  border-radius: 100px;
+  font-size: 35px;
+  margin: 0 1rem;
+  font-family: inherit;
+  padding: 0.25em 0.5em;
+}
+
+.btn-size:hover{
+  background-color: rgb(90, 14, 14);
+  color: rgb(184, 184, 184);
+}
+
 #foodtostomach{
   display:flex;
   flex-wrap: wrap;
@@ -90,8 +119,9 @@ h1, h2, h3, h4 {
 
 .food-card img{
   /* Change so that it changes size to maintain aspect ratio */
-  width: 200px;
-  height: 200px;
+  max-width: 200px;
+  max-height: 200px;
+ white-space: pre;
 }
 
 .food-card h2 {
