@@ -1,31 +1,60 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import QuestionCard from "./components/Questions";
+import FoodBox from "./components/FoodBox";
+import StomachList from "./components/Stomach"
 
-import QuestionCard from './components/Questions'
-import FoodBox from './components/FoodBox'
+class App extends Component {
+  state = {
+    startGame: false,
+  };
 
-function App() {
-  return (
-    <Router>
-    <div className="App">
-      <Route exact path="/" component={Start}/>
-      <Route path="/eat" component={FoodBox}/>
-    </div>
-    </Router>
-  );
+  handleStart = (event) => {
+    this.setState({
+      startGame: true,
+    });
+  };
+  render() {
+    return (
+      <div className="App">
+        {this.state.startGame ? (
+          <FoodToStomach/>
+        ) : (
+          <Start onChange={this.handleStart} />
+        )}
+      </div>
+    );
+  }
 }
 
 export default App;
 
-function Start(){
-  return(
-    <div id="startPart">
-      <h1>Stomach Partitioning</h1>
-      <h2>How much can you eat?</h2>
-      <Link to="/eat"><button className="start-btn">Start</button></Link>
-    </div>
-  )
+class Start extends Component {
+  startParty = (event) => {
+    this.props.onChange(event.target);
+  };
+  render() {
+    return (
+      <div id="startPart">
+        <h1>Stomach Partitioning</h1>
+        <h2>How much can you eat?</h2>
+        <button className="start-btn" onClick={this.startParty}>
+          Start
+        </button>
+      </div>
+    );
+  }
+}
+
+class FoodToStomach extends Component {
+  render() { 
+    return (
+      <div id="foodtostomach">
+        <FoodBox/>
+        <StomachList/>
+      </div>
+    );
+  }
 }
