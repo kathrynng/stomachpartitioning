@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
-body {
+html, body {
+  height: 100%;
+
   background-color: pink;
   font-family: 'Fredoka One', sans-serif;
   position: relative;
@@ -11,11 +13,50 @@ h1, h2, h3, h4 {
   text-align: center;
 }
 
-#startPart{
+a{
+  color:rgb(32, 116, 185);
+  text-decoration: none;
+}
+
+a:visited{
+  color:rgb(15, 82, 82);
+}
+
+a:hover{
+  color:rgb(0, 163, 163);
+  transition: 0.2s ease;
+}
+
+
+.App{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: table;
+
+}
+
+.main{
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.mainArea{
+  margin-left:auto;
+  margin-right: auto;
+  width: max-content;
   text-align: center;
 }
 
-.App{
+#startPart{
+  text-align: center;
+  font-size: larger;
+}
+
+#startPart img{
+  width: 250px;
 }
 
 .start-btn{
@@ -23,16 +64,79 @@ h1, h2, h3, h4 {
   color:white;
   border: none;
   border-radius: 100px;
-  font-size: 50px;
+  font-size: 45px;
+  font-family: inherit;
+  padding: 0.25em 0.5em;
+  margin:1rem 0;
+}
+
+.start-btn:hover{
+  background-color: rgb(54, 24, 54);
+  color:rgb(184, 184, 184);
+}
+
+.chooseStomachSize{
+  text-align: center;
+}
+
+.chooseStomachSize img{
+  width: 200px
+}
+
+.btn-grp{
+  display: inline;
+  margin: 0 auto;
+}
+
+.btn-size{
+  background-color: rgb(139, 32, 32);
+  color:white;
+  border: none;
+  border-radius: 100px;
+  font-size: 35px;
+  margin: 0 1rem;
   font-family: inherit;
   padding: 0.25em 0.5em;
 }
 
-#FoodSelection{
+.btn-size:hover{
+  background-color: rgb(90, 14, 14);
+  color: rgb(184, 184, 184);
+}
+
+#foodtostomach{
   display:flex;
   flex-wrap: wrap;
+}
+
+.foodArea{
+  display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.random-btn{
+  height:min-content;
+  background-color: rgb(139, 32, 32);
+  color:white;
+  border: none;
+  border-radius: 100px;
+  font-size: 35px;
+  margin: 0 1rem;
+  font-family: inherit;
+  padding: 0.25em 0.5em;
+}
+
+.random-btn:hover{
+  background-color: rgb(90, 14, 14);
+  color: rgb(184, 184, 184);
+}
+
+#FoodSelection{
+  width:min-content;
+  display:grid;
+  grid-template-columns: auto auto;
+  justify-content: space-evenly;
 }
 
 .food-card{
@@ -42,18 +146,46 @@ h1, h2, h3, h4 {
   flex-wrap: wrap;
   
   background-color: white;
-  width: 300px;
+  width: 250px;
   padding: 2em;
-  border-radius: 100px;
+  border-radius: 75px;
   text-align: center;
   margin:1em;
-  height:300px;
+  height:250px;
+
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+     -moz-user-select: none; /* Old versions of Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+          user-select: none; /* Non-prefixed version, currently
+                                supported by Chrome, Edge, Opera and Firefox */
 }
 
 .food-card img{
-  width: 250px;
+  /* Change so that it changes size to maintain aspect ratio */
+  max-width: 200px;
+  max-height: 200px;
+ white-space: pre;
 }
 
 .food-card h2 {
   margin: 0;
+}
+
+.stomachList {
+  width: 250px;
+  height: min-content;
+  margin: auto 1rem;
+}
+
+.stomach-foodList{
+  border-radius: 2rem;
+  /* width: 250px; */
+  height: 500px;
+  padding: 0.5rem 2em;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: hotpink;
+  text-align: left;
 }
