@@ -22,6 +22,8 @@ class FoodBox extends Component {
       var changeToFood = Foods[Math.floor(Math.random() * Foods.length)]
       while (currentFoodList.includes(changeToFood)) changeToFood = Foods[Math.floor(Math.random() * Foods.length)]
       this.setState({['food'+value]: changeToFood});
+
+      
   }
 
   render() {
@@ -62,45 +64,15 @@ class FoodBox extends Component {
 
 export default FoodBox;
 
- //Hook to interact with Stomach.js
-// export const stomachState = {
-//     state: {},
-//     setState(x){
-//       this.state = x
-//       this.updates.forEach(updates => updates(this.state))
-//     },
-//     updates: []
-//   }
-
-// stomachState.setState = stomachState.setState.bind(stomachState)
-
-// export function useStomachState(){
-//   const [state, setStomachState] = useState(stomachState.state)
-
-//   if (!stomachState.updates.includes(setStomachState)){
-//     stomachState.updates.push(setStomachState)
-//   }
-
-//   useEffect(() => {
-//     return () => {
-//       stomachState.updates = stomachState.updates.filter(updates => updates !== setStomachState)
-//     }
-//   }, [])
-
-//   return [state, stomachState.setState]
-// }
-
 function FoodSelect({ onFoodChange, id, name, source, type}){
 
   const [stomachList, updateStomachList] = useStore(StomachListStore)
 
   function changeFood(){
-    console.log(typeof stomachList)
     updateStomachList({type: "add", payload: name})
-    console.log(stomachList)
-
     onFoodChange(id);
   };
+
 
   return (
       <div className="food-card" onClick={changeFood}>

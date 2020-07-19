@@ -8,7 +8,6 @@ export const StomachListStore = createStore(
     foodItems: [],
   },
   (state, action) => {
-    console.log(action.payload);
     switch (action.type) {
       case "add":
         const id = ++state.foodStomachId;
@@ -29,9 +28,10 @@ function StomachList() {
 
   if (stomachListItems.foodItems.length === 0) {
     return (
-        <div className='stomachList'>
-            <h1>Click a Treat to eat!</h1>
-        </div>);
+      <div className="stomachList">
+        <h1>Click a Treat to eat!</h1>
+      </div>
+    );
   } else {
     for (var n = 0; n < stomachListItems.length; n++) {
       stomachListPrint.push(
@@ -44,13 +44,15 @@ function StomachList() {
     }
 
     return (
-<div className='stomachList'>
+      <div className="stomachList">
         <h1>You Ate:</h1>
-      <ul>
-        {stomachListItems.foodItems.map((foodItem) => (
-          <li key={foodItem.id}>{foodItem.name}</li>
-        ))}
-      </ul>
+        <div className="stomach-foodList">
+          <ul>
+            {stomachListItems.foodItems.map((foodItem) => (
+              <li key={foodItem.id}>{foodItem.name}</li>
+            ))}
+          </ul>
+        </div>
       </div>
     );
   }
