@@ -13,6 +13,21 @@ h1, h2, h3, h4 {
   text-align: center;
 }
 
+a{
+  color:rgb(32, 116, 185);
+  text-decoration: none;
+}
+
+a:visited{
+  color:rgb(15, 82, 82);
+}
+
+a:hover{
+  color:rgb(0, 163, 163);
+  transition: 0.2s ease;
+}
+
+
 .App{
   position: absolute;
   top: 0;
@@ -32,10 +47,16 @@ h1, h2, h3, h4 {
   margin-left:auto;
   margin-right: auto;
   width: max-content;
+  text-align: center;
 }
 
 #startPart{
   text-align: center;
+  font-size: larger;
+}
+
+#startPart img{
+  width: 250px;
 }
 
 .start-btn{
@@ -43,9 +64,10 @@ h1, h2, h3, h4 {
   color:white;
   border: none;
   border-radius: 100px;
-  font-size: 50px;
+  font-size: 45px;
   font-family: inherit;
   padding: 0.25em 0.5em;
+  margin:1rem 0;
 }
 
 .start-btn:hover{
@@ -85,6 +107,29 @@ h1, h2, h3, h4 {
 #foodtostomach{
   display:flex;
   flex-wrap: wrap;
+}
+
+.foodArea{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.random-btn{
+  height:min-content;
+  background-color: rgb(139, 32, 32);
+  color:white;
+  border: none;
+  border-radius: 100px;
+  font-size: 35px;
+  margin: 0 1rem;
+  font-family: inherit;
+  padding: 0.25em 0.5em;
+}
+
+.random-btn:hover{
+  background-color: rgb(90, 14, 14);
+  color: rgb(184, 184, 184);
 }
 
 #FoodSelection{
@@ -142,4 +187,5 @@ h1, h2, h3, h4 {
   overflow-y: auto;
   overflow-x: hidden;
   background-color: hotpink;
+  text-align: left;
 }

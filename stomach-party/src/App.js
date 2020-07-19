@@ -1,10 +1,12 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
+import StomachImg from './images/stomach.png';
 import "./App.css";
+
+import {useStore} from 'react-hookstore'
 
 import QuestionCard from "./components/Questions";
 import FoodBox from "./components/FoodBox";
-import StomachList, { ChooseStomachSize } from "./components/Stomach";
+import StomachList, { ChooseStomachSize, StomachListStore } from "./components/Stomach";
 
 class App extends Component {
   state = {
@@ -42,11 +44,13 @@ class Start extends Component {
   render() {
     return (
       <div id="startPart">
+        <img src={StomachImg}/>
         <h1>Stomach Partitioning</h1>
         <h2>How much can you eat?</h2>
         <button className="start-btn" onClick={this.startParty}>
           Start
         </button>
+        <h2><a href="https://github.com/kathrynng/stomachpartitioning">By Kathryn Ng (GH Page)</a></h2>
       </div>
     );
   }
@@ -61,14 +65,16 @@ class FoodToStomach extends Component {
       selectedSize: true,
     });
   };
+  replay = (event) => {
+    this.setState({
+      selectedSize: false
+    })
+  }
   render() {
     return (
       <div>
         {this.state.selectedSize ? (
-          <div id="foodtostomach">
-            <FoodBox />
-            <StomachList />
-          </div>
+          <GameNResult onReplay={this.replay}/>
         ) : (
           <div id="stomachSize">
             <ChooseStomachSize onChange={this.selectedSize} />
@@ -76,5 +82,36 @@ class FoodToStomach extends Component {
         )}
       </div>
     );
+  }
+}
+
+function GameNResult({onReplay}){
+  const [stomachList, updateStomachList] = useStore(StomachListStore)
+
+  var fullStomach = stomachList.fullStomach
+
+  function replayGame(event){
+    updateStomachList({type:'reset'})
+    onReplay(event.target)
+  }
+
+  if(fullStomach){
+    return(
+      <div>
+        <h1>Congrats!</h1>
+        <StomachList />
+        <button className="start-btn" onClick={replayGame}>Replay</button>
+        <h2><a href="https://github.com/kathrynng/stomachpartitioning">Visit GH Page</a></h2>
+
+      </div>
+    )
+  }else{
+    return(
+      <div id="foodtostomach">
+              <FoodBox />
+              <StomachList />
+            </div>
+    )
+    
   }
 }
