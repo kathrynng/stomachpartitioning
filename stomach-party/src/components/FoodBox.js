@@ -1,6 +1,9 @@
-import React, { Component } from "react";
+import React, { Component, useState, useEffect } from "react";
 
 import Foods from "./images";
+
+import {StomachListStore} from './Stomach'
+import {useStore} from 'react-hookstore'
 
 class FoodBox extends Component {
   constructor(props) {
@@ -11,29 +14,15 @@ class FoodBox extends Component {
       food3: Foods[2],
       food4: Foods[3],
     };
-    this.onChange = this.onChange.bind(this);
-    
+    this.onChange = this.onChange.bind(this) 
   }
 
   onChange = (value) => {
     var currentFoodList = [this.state.food1, this.state.food2, this.state.food3, this.state.food4]
       var changeToFood = Foods[Math.floor(Math.random() * Foods.length)]
       while (currentFoodList.includes(changeToFood)) changeToFood = Foods[Math.floor(Math.random() * Foods.length)]
-    switch (value) {
-      case '1':
-        this.setState({food1: changeToFood});
-        break
-      case '2':
-        this.setState({food2: changeToFood});
-        break
-      case '3':
-        this.setState({food3: changeToFood});
-        break
-      case '4':
-        this.setState({food4: changeToFood});
-        break
-    }
-  };
+      this.setState({['food'+value]: changeToFood});
+  }
 
   render() {
     return (
@@ -73,26 +62,50 @@ class FoodBox extends Component {
 
 export default FoodBox;
 
-class FoodSelect extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-        type: this.props.type
-        
-    }
+ //Hook to interact with Stomach.js
+// export const stomachState = {
+//     state: {},
+//     setState(x){
+//       this.state = x
+//       this.updates.forEach(updates => updates(this.state))
+//     },
+//     updates: []
+//   }
 
-  }
+// stomachState.setState = stomachState.setState.bind(stomachState)
 
-  changeFood = () => {
-    this.props.onFoodChange(this.props.id);
+// export function useStomachState(){
+//   const [state, setStomachState] = useState(stomachState.state)
+
+//   if (!stomachState.updates.includes(setStomachState)){
+//     stomachState.updates.push(setStomachState)
+//   }
+
+//   useEffect(() => {
+//     return () => {
+//       stomachState.updates = stomachState.updates.filter(updates => updates !== setStomachState)
+//     }
+//   }, [])
+
+//   return [state, stomachState.setState]
+// }
+
+function FoodSelect({ onFoodChange, id, name, source, type}){
+
+  const [stomachList, updateStomachList] = useStore(StomachListStore)
+
+  function changeFood(){
+    console.log(typeof stomachList)
+    updateStomachList({type: "add", payload: name})
+    console.log(stomachList)
+
+    onFoodChange(id);
   };
 
-  render() {
-    return (
-      <div className="food-card" onClick={this.changeFood}>
-        <img src={this.props.source} />
-        <h2>{this.props.name}</h2>
+  return (
+      <div className="food-card" onClick={changeFood}>
+        <img src={source} />
+        <h2>{name}</h2>
       </div>
     );
-  }
 }
