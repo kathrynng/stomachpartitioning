@@ -1,6 +1,9 @@
-import React, { Component } from "react";
+import React, { Component, useState, useEffect } from "react";
 
 import Foods from "./images";
+
+import {StomachListStore} from './Stomach'
+import {useStore} from 'react-hookstore'
 
 class FoodBox extends Component {
   constructor(props) {
@@ -11,32 +14,34 @@ class FoodBox extends Component {
       food3: Foods[2],
       food4: Foods[3],
     };
-    this.onChange = this.onChange.bind(this);
-    
+    this.onChange = this.onChange.bind(this) 
   }
 
   onChange = (value) => {
     var currentFoodList = [this.state.food1, this.state.food2, this.state.food3, this.state.food4]
       var changeToFood = Foods[Math.floor(Math.random() * Foods.length)]
       while (currentFoodList.includes(changeToFood)) changeToFood = Foods[Math.floor(Math.random() * Foods.length)]
-    switch (value) {
-      case '1':
-        this.setState({food1: changeToFood});
-        break
-      case '2':
-        this.setState({food2: changeToFood});
-        break
-      case '3':
-        this.setState({food3: changeToFood});
-        break
-      case '4':
-        this.setState({food4: changeToFood});
-        break
-    }
-  };
+      this.setState({['food'+value]: changeToFood});
+  }
+
+  randomizeFood = () => {
+    var currentFoodList = [this.state.food1, this.state.food2, this.state.food3, this.state.food4]
+    var newFoodList = []
+    
+    for(var n = 1; n <= 4; n++){
+      var changeToFood = Foods[Math.floor(Math.random() * Foods.length)]
+      while (currentFoodList.includes(changeToFood) || newFoodList.includes(changeToFood))
+        var changeToFood = Foods[Math.floor(Math.random() * Foods.length)]
+      newFoodList.push(changeToFood)
+  }
+  for(var n = 1; n <= 4; n++)
+    this.setState({['food'+n]: newFoodList[n-1]});
+}
 
   render() {
     return (
+      <div className='foodArea'>
+        <button className='random-btn' onClick={this.randomizeFood}>Randomize</button>
       <div id="FoodSelection">
         <FoodSelect
           onFoodChange={this.onChange}
@@ -67,32 +72,28 @@ class FoodBox extends Component {
           source={this.state.food4.source}
         />
       </div>
+      </div>
+
     );
   }
 }
 
 export default FoodBox;
 
-class FoodSelect extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-        type: this.props.type
-        
-    }
+function FoodSelect({ onFoodChange, id, name, source, type}){
 
-  }
+  const [stomachList, updateStomachList] = useStore(StomachListStore)
 
-  changeFood = () => {
-    this.props.onFoodChange(this.props.id);
+  function changeFood(){
+    updateStomachList({type: "add", payload: name})
+    onFoodChange(id);
   };
 
-  render() {
-    return (
-      <div className="food-card" onClick={this.changeFood}>
-        <img src={this.props.source} />
-        <h2>{this.props.name}</h2>
+
+  return (
+      <div className="food-card" onClick={changeFood}>
+        <img src={source} />
+        <h2>{name}</h2>
       </div>
     );
-  }
 }

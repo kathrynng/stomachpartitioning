@@ -16,7 +16,7 @@ import FishChips from '../images/food_Fish_and_Chips.png'
 import Salmon from '../images/food_Grilled_Salmon.png'
 import Thali from '../images/food_Indian.png'
 import Kastudon from '../images/food_Katsudon.png'
-import MacCheese from '../images/food_Mixed_Rice.png'
+import MacCheese from '../images/food_Macaroni_and_Cheese.png'
 import Eggplants from '../images/food_Nasu_Nibitashi.png'
 import Sandwich from '../images/food_Sandwich.png'
 import spBolog from '../images/food_Spaghetti_Bolognese.png'
@@ -29,7 +29,7 @@ import IceCr from '../images/sweets_icecream.png'
 import CandyApple from '../images/sweets_Candy_Apple.png'
 import fruitTart from '../images/sweets_Fruit_Tart.png'
 import honeyToast from '../images/sweets_Honey_Toast.png'
-import milleCrepe from '../images/sweets_Mille_Crepe.png'
+import milleCrepe from '../images/sweets_mille_crepe.png'
 
 export default [
     {"name" : "Apple Pie","source": ApplePie, "type":"sweet"},
