@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "976c55d200bfffb755f28895937f473a",
+    "revision": "3cf3c722badc39614faf0d9c1bca1c28",
     "url": "/stomachpartitioning/index.html"
   },
   {
-    "revision": "9a593478f4093b271f7b",
+    "revision": "ef02989dc0421769963c",
     "url": "/stomachpartitioning/static/css/main.031089e6.chunk.css"
   },
   {
-    "revision": "ba85a8337c706cb3595e",
-    "url": "/stomachpartitioning/static/js/2.b99fbbee.chunk.js"
+    "revision": "da464d4785c66690c14d",
+    "url": "/stomachpartitioning/static/js/2.ef858052.chunk.js"
   },
   {
     "revision": "e88a3e95b5364d46e95b35ae8c0dc27d",
-    "url": "/stomachpartitioning/static/js/2.b99fbbee.chunk.js.LICENSE.txt"
+    "url": "/stomachpartitioning/static/js/2.ef858052.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "9a593478f4093b271f7b",
-    "url": "/stomachpartitioning/static/js/main.a0b21c15.chunk.js"
+    "revision": "ef02989dc0421769963c",
+    "url": "/stomachpartitioning/static/js/main.7ced2e04.chunk.js"
   },
   {
     "revision": "9d912b2262c2a3f4e583",
@@ -64,20 +64,48 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/stomachpartitioning/static/media/food_Grilled_Salmon.a393fe8a.png"
   },
   {
+    "revision": "1ed6b83b33f25c6f839a71030cd5bd00",
+    "url": "/stomachpartitioning/static/media/food_Indian.1ed6b83b.png"
+  },
+  {
+    "revision": "1cf0b54198e7b68c9d12c9fc68c9f125",
+    "url": "/stomachpartitioning/static/media/food_Katsudon.1cf0b541.png"
+  },
+  {
     "revision": "9cc7b6e0e8437457d947e713379e8139",
     "url": "/stomachpartitioning/static/media/food_Lasagna.9cc7b6e0.png"
+  },
+  {
+    "revision": "c460236dc5e015cccc1528e7c91dab4f",
+    "url": "/stomachpartitioning/static/media/food_Macaroni_and_Cheese.c460236d.png"
   },
   {
     "revision": "59b0341d5770d1c6d157abd669a2d2dc",
     "url": "/stomachpartitioning/static/media/food_Mixed_Nuts.59b0341d.png"
   },
   {
+    "revision": "807ed34a69513cde55b8c014430e47a7",
+    "url": "/stomachpartitioning/static/media/food_Nasu_Nibitashi.807ed34a.png"
+  },
+  {
     "revision": "d66cb70df8be5989d8e2117719fdc8eb",
     "url": "/stomachpartitioning/static/media/food_Pretzel.d66cb70d.png"
   },
   {
+    "revision": "702c8fa8f306a34b042b81b43eb3c1b1",
+    "url": "/stomachpartitioning/static/media/food_Sandwich.702c8fa8.png"
+  },
+  {
     "revision": "1920b9783842fef92beca3a2b101481b",
     "url": "/stomachpartitioning/static/media/food_Shio_Ramen.1920b978.png"
+  },
+  {
+    "revision": "4787a9152b9bf626b91c31b71656c75d",
+    "url": "/stomachpartitioning/static/media/food_Spaghetti_Bolognese.4787a915.png"
+  },
+  {
+    "revision": "1de20396dc83204e07930dadfd16f8f8",
+    "url": "/stomachpartitioning/static/media/food_Spaghetti_Carbonara.1de20396.png"
   },
   {
     "revision": "e8567c771f94fadf0bdf814279ee4dde",
@@ -92,8 +120,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/stomachpartitioning/static/media/sweets_Apple_Pie.03472f9f.png"
   },
   {
+    "revision": "cac669813b857ab56f88814be034e159",
+    "url": "/stomachpartitioning/static/media/sweets_Candy_Apple.cac66981.png"
+  },
+  {
     "revision": "07bf336832c50ccb70db48668492099b",
     "url": "/stomachpartitioning/static/media/sweets_Crepe.07bf3368.png"
+  },
+  {
+    "revision": "742015eb24945473db0d5f16e0b169d5",
+    "url": "/stomachpartitioning/static/media/sweets_Fruit_Tart.742015eb.png"
+  },
+  {
+    "revision": "44ea41cb17c8e2904d32665b37792577",
+    "url": "/stomachpartitioning/static/media/sweets_Honey_Toast.44ea41cb.png"
   },
   {
     "revision": "31213bb0bc222061bd209076a5d3fb62",
@@ -102,5 +142,9 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "dfe093e7b40ed421704fbde3796fb7f7",
     "url": "/stomachpartitioning/static/media/sweets_jelly.dfe093e7.png"
+  },
+  {
+    "revision": "0225943140c5ee3350466298dcabe27b",
+    "url": "/stomachpartitioning/static/media/sweets_mille_crepe.02259431.png"
   }
 ]);

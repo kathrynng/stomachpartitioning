@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/stomachpartitioning/precache-manifest.8fcfd74b48a485eb66c54c353f4a5060.js"
+  "/stomachpartitioning/precache-manifest.79e812f6fc4cbafb002f73005dcff18a.js"
 );
 
 self.addEventListener('message', (event) => {
